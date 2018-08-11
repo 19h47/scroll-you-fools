@@ -1,6 +1,10 @@
 # Reverse scroll
 
+Two columns, one scroll.
+
 ![Reverse scroll](screenshot.jpg)
+
+ReverseScroll reverses scroll for two columns.
 
 ## Installation
 
