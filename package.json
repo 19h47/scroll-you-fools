@@ -1,6 +1,6 @@
 {
 	"name": "reverse-scroll",
-	"version": "1.0.18",
+	"version": "1.0.19",
 	"description": "Reverse scrolling for two columns",
 	"main": "dist/main.js",
 	"scripts": {
