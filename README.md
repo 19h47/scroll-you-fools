@@ -19,7 +19,7 @@ npm install reverse-scroll
 ```javascript
 const container = document.getElementsByClassName('js-container');
 const options = {};
-const hs = new ReverseScroll(container, options);
+const Rs = new ReverseScroll(container, options);
 ```
 
 ### CSS
