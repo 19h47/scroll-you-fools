@@ -1,0 +1,41 @@
+{
+	"name": "reverse-scroll",
+	"version": "1.0.0",
+	"description": "Reverse scrolling for two columns",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"prod": "./bin/production",
+		"dev": "./bin/development"
+	},
+	"keywords": [
+		"raf",
+		"virtual-scroll",
+		"events"
+	],
+	"author": "Jérémy Levron <jeremylevron@19h47.fr> (http://19h47.fr)",
+	"license": "ISC",
+	"dependencies": {
+		"prefix": "^1.0.0",
+		"raf": "^3.3.0",
+		"virtual-scroll": "^1.1.1"
+	},
+	"devDependencies": {
+		"babel-core": "^6.26.3",
+		"babel-eslint": "^8.2.6",
+		"babel-loader": "^7.1.5",
+		"clean-webpack-plugin": "^0.1.19",
+		"eslint": "^5.3.0",
+		"eslint-config-airbnb-base": "^13.0.0",
+		"eslint-config-standard": "^11.0.0",
+		"eslint-import-resolver-webpack": "^0.10.1",
+		"eslint-loader": "^2.1.0",
+		"eslint-plugin-import": "^2.13.0",
+		"eslint-plugin-node": "^7.0.1",
+		"eslint-plugin-promise": "^3.8.0",
+		"eslint-plugin-standard": "^3.1.0",
+		"webpack": "^4.16.5",
+		"webpack-cli": "^3.1.0",
+		"webpack-notifier": "^1.6.0"
+	}
+}
