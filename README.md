@@ -12,7 +12,7 @@ npm install reverse-scroll
 
 ### JavaScript
 
-```
+```javascript
 const container = document.getElementsByClassName('js-container');
 const options = {};
 const hs = new HorizontalScroll.default(container, options);
@@ -20,7 +20,7 @@ const hs = new HorizontalScroll.default(container, options);
 
 ### CSS
 
-```scss
+```css
 // Utilities
 .h-xs-100 {
 	height: 100%;
