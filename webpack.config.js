@@ -6,7 +6,11 @@ const path = require('path');
 
 module.exports = {
 	watch: production ? false : true,
-	entry: path.resolve(__dirname, 'src/ReverseScroll.js'),
+	entry: path.resolve(__dirname, 'src/index.js'),
+	output: {
+		library: 'ReverseScroll',
+		libraryTarget: 'umd',
+	},
 	resolve: {
 		alias: {
 			Utils: path.resolve(__dirname, 'src/utils'),

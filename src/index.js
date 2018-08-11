@@ -34,10 +34,6 @@ export default class ReverseScroll extends EventEmitter {
 
 		this.wrapper = element;
 
-		if (this.wrapper === null || this.wrapper === undefined) {
-			return false;
-		}
-
 		this.columns = {
 			right: element.querySelector('.js-row-right'),
 			left: element.querySelector('.js-row-left'),
@@ -50,8 +46,6 @@ export default class ReverseScroll extends EventEmitter {
 
 		this.addEvents();
 		this.onResize();
-
-		return true;
 	}
 
 

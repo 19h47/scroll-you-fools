@@ -1,8 +1,8 @@
 {
 	"name": "reverse-scroll",
-	"version": "1.0.0",
+	"version": "1.0.16",
 	"description": "Reverse scrolling for two columns",
-	"main": "dist/index.js",
+	"main": "dist/main.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"prod": "./bin/production",
