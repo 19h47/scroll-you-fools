@@ -1,6 +1,6 @@
 # Reverse scroll
 
-![Reverse scroll](screenshot.png)
+![Reverse scroll](screenshot.jpg)
 
 ## Installation
 
