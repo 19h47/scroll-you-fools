@@ -121,7 +121,7 @@ const Rs = new ReverseScroll(container, options);
 
 ## Acknowledgments
 
-- Corentin Fardeau](https://github.com/Corentinfardeau/horizontal-scroll), so inspiring
+- [Corentin Fardeau](https://github.com/Corentinfardeau/horizontal-scroll), so inspiring
 
 ## To do
 
