@@ -132,9 +132,11 @@ An example is located right [here](example/index.html), see sources.
 
 ## Authors
 
-Thanks to [Corentin Fardeau](https://github.com/Corentinfardeau/horizontal-scroll), so inspiring
-
 ## Acknowledgments
+
+- Corentin Fardeau](https://github.com/Corentinfardeau/horizontal-scroll), so inspiring
+
+## To do
 
 - [ ] Remove [Bootstrap](https://getbootstrap.com/) dependency
 - [ ] Create an example
