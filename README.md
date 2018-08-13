@@ -134,7 +134,7 @@ An example is located right [here](example/index.html), see sources.
 
 ## Acknowledgments
 
-- Corentin Fardeau](https://github.com/Corentinfardeau/horizontal-scroll), so inspiring
+- [Corentin Fardeau](https://github.com/Corentinfardeau/horizontal-scroll), so inspiring
 
 ## To do
 
