@@ -136,4 +136,5 @@ Thanks to [Corentin Fardeau](https://github.com/Corentinfardeau/horizontal-scrol
 
 ## Acknowledgments
 
-[ ] Remove [Bootstrap](https://getbootstrap.com/) dependency
+- [ ] Remove [Bootstrap](https://getbootstrap.com/) dependency
+- [ ] Create an example
