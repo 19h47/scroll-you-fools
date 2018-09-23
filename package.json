@@ -1,6 +1,6 @@
 {
 	"name": "reverse-scroll",
-	"version": "1.0.21",
+	"version": "1.1.0",
 	"description": "Reverse scrolling for two columns",
 	"main": "dist/main.js",
 	"scripts": {
@@ -25,17 +25,17 @@
 		"babel-eslint": "^8.2.6",
 		"babel-loader": "^7.1.5",
 		"clean-webpack-plugin": "^0.1.19",
-		"eslint": "^5.3.0",
-		"eslint-config-airbnb-base": "^13.0.0",
+		"eslint": "^5.6.0",
+		"eslint-config-airbnb-base": "^13.1.0",
 		"eslint-config-standard": "^11.0.0",
 		"eslint-import-resolver-webpack": "^0.10.1",
-		"eslint-loader": "^2.1.0",
-		"eslint-plugin-import": "^2.13.0",
+		"eslint-loader": "^2.1.1",
+		"eslint-plugin-import": "^2.14.0",
 		"eslint-plugin-node": "^7.0.1",
 		"eslint-plugin-promise": "^3.8.0",
 		"eslint-plugin-standard": "^3.1.0",
-		"webpack": "^4.16.5",
-		"webpack-cli": "^3.1.0",
+		"webpack": "^4.19.1",
+		"webpack-cli": "^3.1.1",
 		"webpack-notifier": "^1.6.0"
 	},
 	"repository": {

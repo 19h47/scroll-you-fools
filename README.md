@@ -17,20 +17,26 @@ npm install reverse-scroll
 ### JavaScript
 
 ```javascript
-const container = document.getElementsByClassName('js-container');
+const container = document.getElementsByClassName('js-container')[0];
 const options = {};
-const Rs = new ReverseScroll(container, options);
+const Rs = new ReverseScroll.default(container, options);
 ```
 
 ### CSS
 
 ```css
+
+body {
+	overflow: hidden;
+}
+
 // Utilities
 .h-xs-100 {
 	height: 100%;
 }
 
 .reverse-scroll {
+	position: relative;
 	height: 100vh;
 }
 
@@ -55,7 +61,7 @@ const Rs = new ReverseScroll(container, options);
 	transform: translate3d( 0, 100%, 0 );
 }
 
-.lookbook__row--right {
+.reverse-scroll__row--right {
 	bottom: 100%;
 	transform: translate3d( 0, -100%, 0 );
 }
@@ -76,11 +82,13 @@ const Rs = new ReverseScroll(container, options);
 
 	object-position: center;
 }
+
 ```
 
 ### HTML
 
 ```html
+
 <div class="reverse-scroll">
 	<div class="reverse-scroll__columns js-container">
 		<div class="row h-xs-100">
@@ -113,9 +121,14 @@ const Rs = new ReverseScroll(container, options);
 		</div>
 	</div>
 </div>
+
 ```
 
 ## Options
+
+## Example
+
+An example is located right [here](example/index.html), see sources.
 
 ## Authors
 

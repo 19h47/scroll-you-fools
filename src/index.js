@@ -39,6 +39,13 @@ export default class ReverseScroll extends EventEmitter {
 			left: element.querySelector('.js-row-left'),
 		};
 
+		this.counter = Math.max(
+			this.columns.right.children.length,
+			this.columns.left.children.length,
+		);
+
+		// console.log({ right: this.columns.right, left: this.columns.left });
+
 		this.vs = new VirtualScroll();
 		this.transform = transform('transform');
 
@@ -106,7 +113,9 @@ export default class ReverseScroll extends EventEmitter {
 	 * @
 	 */
 	onResize() {
-		this.vars.scrollBottom = this.wrapper.getBoundingClientRect().height + (window.innerHeight * 2);
+		const wrapperHeight = this.wrapper.getBoundingClientRect().height;
+
+		this.vars.scrollBottom = wrapperHeight + (window.innerHeight * this.counter);
 	}
 
 
