@@ -4,9 +4,9 @@
 	"description": "Reverse scrolling for two columns",
 	"main": "dist/main.js",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
 		"prod": "./bin/production",
-		"dev": "./bin/development"
+		"dev": "./bin/development",
+		"deploy": "./bin/deploy"
 	},
 	"keywords": [
 		"raf",

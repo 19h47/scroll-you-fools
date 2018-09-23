@@ -90,7 +90,7 @@ body {
 ```html
 
 <div class="reverse-scroll">
-	<div class="reverse-scroll__columns js-container">
+	<div class="reverse-scroll__columns js-container container-fluid">
 		<div class="row h-xs-100">
 			<div class="col-5 offset-1 h-xs-100">
 				<div class="reverse-scroll__row reverse-scroll__row--left js-row-left">
@@ -139,4 +139,3 @@ An example is located right [here](example/index.html), see sources.
 ## To do
 
 - [ ] Remove [Bootstrap](https://getbootstrap.com/) dependency
-- [ ] Create an example
