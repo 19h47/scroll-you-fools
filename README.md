@@ -128,7 +128,7 @@ body {
 
 ## Example
 
-An example is located right [here](https://rawgit.com/19h47/reverse-scroll/master/example/index.html), see sources.
+An example is located right [here](/example/index.html), see sources.
 
 ## Authors
 
