@@ -1,4 +1,5 @@
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackNotifier = require('webpack-notifier');
 
 const production = process.env.NODE_ENV === 'production';
@@ -31,8 +32,13 @@ module.exports = {
 		}]
 	},
 	plugins: [
-		new CleanWebpackPlugin(['dist']),
+		new CleanWebpackPlugin(['dist', 'example']),
 		new WebpackNotifier(),
+		new HtmlWebpackPlugin({
+      		filename: path.resolve(__dirname, 'example/index.html' ),
+      		template: path.resolve(__dirname, 'index.html' ),
+			inject: true,
+    	})
 	],
 	devtool: production ? false : 'source-map',
 };
