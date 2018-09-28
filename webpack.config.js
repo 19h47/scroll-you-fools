@@ -1,4 +1,5 @@
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackNotifier = require('webpack-notifier');
 
@@ -7,10 +8,15 @@ const path = require('path');
 
 module.exports = {
 	watch: production ? false : true,
-	entry: path.resolve(__dirname, 'src/index.js'),
+	entry: {
+		dist: path.resolve(__dirname, 'src/index.js'),
+		example: path.resolve(__dirname, 'src/index.js')
+	},
 	output: {
 		library: 'ReverseScroll',
 		libraryTarget: 'umd',
+		path: path.resolve(__dirname),
+		filename: '[name]/main.js'
 	},
 	resolve: {
 		alias: {
@@ -32,12 +38,17 @@ module.exports = {
 		}]
 	},
 	plugins: [
-		new CleanWebpackPlugin(['dist', 'example']),
+		new CleanWebpackPlugin(
+			['dist', 'example'],
+			{
+				exclude: ['.git']
+			}
+		),
 		new WebpackNotifier(),
 		new HtmlWebpackPlugin({
       		filename: path.resolve(__dirname, 'example/index.html' ),
       		template: path.resolve(__dirname, 'index.html' ),
-			inject: true,
+			inject: false,
     	})
 	],
 	devtool: production ? false : 'source-map',
