@@ -6,6 +6,7 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 		<style>
 			body {
+				position: relative;
 				overflow: hidden;
 			}
 
@@ -17,6 +18,7 @@
 			.reverse-scroll {
 				position: relative;
 				height: 100vh;
+				z-index: 5;
 			}
 
 			.reverse-scroll__columns {
@@ -62,9 +64,51 @@
 				object-fit: contain;
 				object-position: center;
 			}
+
+			/* Header */
+			.reverse-scroll__header {
+				position: absolute;
+
+				top: 0;
+				right: 0;
+				left: 0;
+
+				z-index: 10;
+			}
+
+			.reverse-scroll__content {
+				position: absolute;
+
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+
+				z-index: 10;
+			}
+
 		</style>
 	</head>
 	<body class="h-xs-100">
+		<header class="reverse-scroll__header">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-12">
+						<h1 class="h2 mt-2"><a href="">Reverse scroll</a></h1>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<section class="reverse-scroll__content">
+			<div class="container-fluid h-100">
+				<div class="row align-items-center h-100">
+					<div class="col-12 text-center">
+						<p class="h2">Scrollez, pauvre fous</p>
+					</div>
+				</div>
+			</div>
+		</section>
 		<div class="reverse-scroll">
 			<div class="reverse-scroll__columns js-container container-fluid">
 				<div class="row h-xs-100">
