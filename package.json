@@ -6,7 +6,8 @@
 	"scripts": {
 		"prod": "./bin/production",
 		"dev": "./bin/development",
-		"deploy": "./bin/deploy"
+		"deploy": "./bin/deploy",
+		"server": "./bin/server"
 	},
 	"keywords": [
 		"raf",
@@ -18,7 +19,8 @@
 	"dependencies": {
 		"prefix": "^1.0.0",
 		"raf": "^3.3.0",
-		"virtual-scroll": "^1.1.1"
+		"virtual-scroll": "^1.1.1",
+		"webpack-dev-server": "^3.1.9"
 	},
 	"devDependencies": {
 		"babel-core": "^6.26.3",

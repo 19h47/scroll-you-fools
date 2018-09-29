@@ -1,5 +1,4 @@
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackNotifier = require('webpack-notifier');
 
@@ -17,6 +16,12 @@ module.exports = {
 		libraryTarget: 'umd',
 		path: path.resolve(__dirname),
 		filename: '[name]/main.js'
+	},
+	devServer: {
+    	contentBase: path.resolve(__dirname, 'dist'),
+    	compress: true,
+    	port: 9000,
+		inline: true,
 	},
 	resolve: {
 		alias: {
