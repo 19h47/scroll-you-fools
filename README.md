@@ -4,14 +4,14 @@
 
 Two columns, one scroll.
 
-![Reverse scroll](screenshot.jpg)
+![Scroll, you fools](screenshot.jpg)
 
-ReverseScroll reverses scroll for two columns.
+Reverses scroll for two columns.
 
 ## Installation
 
 ```
-npm install reverse-scroll
+npm install scroll-you-fools
 ```
 
 ## Usage
@@ -37,12 +37,12 @@ body {
 	height: 100%;
 }
 
-.reverse-scroll {
+.scroll-you-fools {
 	position: relative;
 	height: 100vh;
 }
 
-.reverse-scroll__columns {
+.scroll-you-fools__columns {
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -50,7 +50,7 @@ body {
 	left: 0;
 }
 
-.reverse-scroll__row {
+.scroll-you-fools__row {
 	position: absolute;
 	right: 0;
 	left: 0;
@@ -58,17 +58,17 @@ body {
 	margin-left: 15px;
 }
 
-.reverse-scroll__row--left {
+.scroll-you-fools__row--left {
 	top: 100%;
 	transform: translate3d( 0, 100%, 0 );
 }
 
-.reverse-scroll__row--right {
+.scroll-you-fools__row--right {
 	bottom: 100%;
 	transform: translate3d( 0, -100%, 0 );
 }
 
-.reverse-scroll__column {
+.scroll-you-fools__column {
 	padding-top: 12vh;
 	padding-bottom: 12vh;
 
@@ -76,7 +76,7 @@ body {
 	height: 100vh;
 }
 
-.reverse-scroll__image {
+.scroll-you-fools__image {
 	height: 100%;
 	width: 100%;
 
@@ -91,14 +91,14 @@ body {
 
 ```html
 
-<div class="reverse-scroll">
-	<div class="reverse-scroll__columns js-container container-fluid">
+<div class="scroll-you-fools">
+	<div class="scroll-you-fools__columns js-container container-fluid">
 		<div class="row h-xs-100">
 			<div class="col-5 offset-1 h-xs-100">
-				<div class="reverse-scroll__row reverse-scroll__row--left js-row-left">
-					<div class="reverse-scroll__column">
+				<div class="scroll-you-fools__row scroll-you-fools__row--left js-row-left">
+					<div class="scroll-you-fools__column">
 						<img
-							class="reverse-scroll__image"
+							class="scroll-you-fools__image"
 							src="https://picsum.photos/528/348"
 							width="528"
 							height="348"
@@ -108,10 +108,10 @@ body {
 				</div>
 			</div>
 			<div class="col-12 col-lg-5 h-xs-100">
-				<div class="reverse-scroll__row reverse-scroll__row--right js-row-right">
-					<div class="reverse-scroll__column">
+				<div class="scroll-you-fools__row scroll-you-fools__row--right js-row-right">
+					<div class="scroll-you-fools__column">
 						<img
-							class="reverse-scroll__image"
+							class="scroll-you-fools__image"
 							src="https://picsum.photos/528/348"
 							width="528"
 							height="348"
@@ -130,7 +130,7 @@ body {
 
 ## Example
 
-An example is located right [here](https://19h47.github.io/reverse-scroll/), see [sources](/example/index.html).
+An example is located right [here](https://19h47.github.io/scroll-you-fools/), see [sources](/example/index.html).
 
 ## Authors
 

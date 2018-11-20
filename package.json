@@ -1,6 +1,6 @@
 {
 	"name": "scroll-you-fools",
-	"version": "1.1.0",
+	"version": "2.0.0",
 	"description": "Reverse scrolling for two columns",
 	"main": "dist/main.js",
 	"scripts": {
