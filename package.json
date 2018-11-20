@@ -1,5 +1,5 @@
 {
-	"name": "reverse-scroll",
+	"name": "scroll-you-fools",
 	"version": "1.1.0",
 	"description": "Reverse scrolling for two columns",
 	"main": "dist/main.js",
@@ -43,6 +43,6 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/19h47/reverse-scroll"
+		"url": "https://github.com/19h47/scroll-you-fools"
 	}
 }
