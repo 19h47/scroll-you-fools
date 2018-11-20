@@ -76,7 +76,9 @@ export default class ReverseScroll extends EventEmitter {
 		// Scroll value
 		this.vars.scrollValue += (this.vars.scrollTarget - this.vars.scrollValue) * this.vars.spring;
 
-		this.vars.scrollValue = clamp(this.vars.scrollValue, -1, this.vars.scrollBottom + 1);
+		this.vars.scrollValue = Math.round(
+			clamp(this.vars.scrollValue, -1, this.vars.scrollBottom + 1),
+		);
 
 		this.columns.right.style[this.transform] = `translate3d(0, ${this.vars.scrollValue}px, 0)`;
 		this.columns.left.style[this.transform] = `translate3d(0, -${this.vars.scrollValue}px, 0)`;

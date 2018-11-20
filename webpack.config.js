@@ -18,9 +18,9 @@ module.exports = {
 		filename: '[name]/main.js'
 	},
 	devServer: {
-    	contentBase: path.resolve(__dirname, 'dist'),
-    	compress: true,
-    	port: 9000,
+		contentBase: path.resolve(__dirname, 'dist'),
+		compress: true,
+		port: 9000,
 		inline: true,
 	},
 	resolve: {
@@ -51,10 +51,10 @@ module.exports = {
 		),
 		new WebpackNotifier(),
 		new HtmlWebpackPlugin({
-      		filename: path.resolve(__dirname, 'example/index.html' ),
-      		template: path.resolve(__dirname, 'index.html' ),
+			  filename: path.resolve(__dirname, 'example/index.html' ),
+			  template: path.resolve(__dirname, 'index.html' ),
 			inject: false,
-    	})
+		})
 	],
 	devtool: production ? false : 'source-map',
 };
