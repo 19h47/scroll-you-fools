@@ -1,7 +1,7 @@
 /**
- * ReverseScroll
+ * ScrollYouFools
  *
- * @file ReverseScroll.js
+ * @file index.js
  * @author  Jérémy Levron <jeremylevron@19h47.fr>
  */
 import { EventEmitter } from 'events';
@@ -11,7 +11,7 @@ import transform from 'prefix';
 
 import clamp from 'Utils/clamp';
 
-export default class ReverseScroll extends EventEmitter {
+export default class ScrollYouFools extends EventEmitter {
 	constructor(element, options) {
 		super();
 

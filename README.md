@@ -21,7 +21,7 @@ npm install scroll-you-fools
 ```javascript
 const container = document.getElementsByClassName('js-container')[0];
 const options = {};
-const Rs = new ReverseScroll.default(container, options);
+const Rs = new ScrollYouFools.default(container, options);
 ```
 
 ### CSS
