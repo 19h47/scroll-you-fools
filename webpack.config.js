@@ -18,10 +18,10 @@ module.exports = {
 		filename: '[name]/main.js'
 	},
 	devServer: {
-		contentBase: path.resolve(__dirname, 'dist'),
 		compress: true,
-		port: 9000,
+		contentBase: path.resolve(__dirname, 'dist'),
 		inline: true,
+		port: 9000,
 	},
 	resolve: {
 		alias: {

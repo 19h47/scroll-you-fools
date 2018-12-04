@@ -18,16 +18,15 @@
 	"license": "ISC",
 	"dependencies": {
 		"prefix": "^1.0.0",
-		"raf": "^3.3.0",
-		"virtual-scroll": "^1.1.1",
-		"webpack-dev-server": "^3.1.9"
+		"raf": "^3.4.1",
+		"virtual-scroll": "^1.1.1"
 	},
 	"devDependencies": {
-		"babel-core": "^6.26.3",
-		"babel-eslint": "^8.2.6",
-		"babel-loader": "^7.1.5",
+		"@babel/core": "^7.2.0",
+		"babel-eslint": "^10.0.1",
+		"babel-loader": "^8.0.4",
 		"clean-webpack-plugin": "^0.1.19",
-		"eslint": "^5.6.0",
+		"eslint": "^5.9.0",
 		"eslint-config-airbnb-base": "^13.1.0",
 		"eslint-config-standard": "^11.0.0",
 		"eslint-import-resolver-webpack": "^0.10.1",
@@ -36,10 +35,11 @@
 		"eslint-plugin-node": "^7.0.1",
 		"eslint-plugin-promise": "^3.8.0",
 		"eslint-plugin-standard": "^3.1.0",
-		"html-webpack-plugin": "^4.0.0-beta.1",
-		"webpack": "^4.19.1",
-		"webpack-cli": "^3.1.1",
-		"webpack-notifier": "^1.6.0"
+		"html-webpack-plugin": "^4.0.0-beta.4",
+		"webpack": "^4.27.0",
+		"webpack-cli": "^3.1.2",
+		"webpack-dev-server": "^3.1.10",
+		"webpack-notifier": "^1.7.0"
 	},
 	"repository": {
 		"type": "git",
