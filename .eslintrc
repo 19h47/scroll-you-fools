@@ -6,7 +6,11 @@
 		"codeFrame": false
 	},
 	"settings": {
-		"import/resolver": webpack,
+	  "import/resolver": {
+		  webpack: {
+			  config: 'config/webpack.common.js'
+		  },
+		}
 	},
 	"extends": ["standard", "airbnb-base"],
 	"rules":{
