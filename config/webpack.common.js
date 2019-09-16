@@ -8,7 +8,7 @@
 const path = require('path');
 
 // Plugins
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackNotifierPlugin = require('webpack-notifier');
 
@@ -19,7 +19,7 @@ function resolve (dir) {
 module.exports = {
 	entry: {
 		dist: resolve('src/index.js'),
-		example: resolve('src/index.js')
+		docs: resolve('src/index.js')
 	},
 	output: {
 		library: 'ScrollYouFools',
@@ -29,7 +29,7 @@ module.exports = {
 	devServer: {
 		contentBase: resolve('/'),
 		compress: true,
-		port: 9000,
+		port: 3000,
 		inline: true,
 		disableHostCheck: true
 	},
@@ -53,12 +53,11 @@ module.exports = {
 		}],
 	},
 	plugins: [
-		new CleanWebpackPlugin(['dist', 'example'], {
-			root: resolve(''),
-			exclude: ['.git']
+		new CleanWebpackPlugin({
+			cleanOnceBeforeBuildPatterns: [resolve('dist'), resolve('docs')],
 		}),
 		new HtmlWebpackPlugin({
-			filename: resolve('example/index.html' ),
+			filename: resolve('docs/index.html' ),
 			template: resolve('index.html' ),
 			inject: false,
 		}),
