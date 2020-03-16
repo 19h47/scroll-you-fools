@@ -18,9 +18,7 @@ export default class ScrollYouFools extends EventEmitter {
 		this.bind();
 
 		// Set default options
-		this.options = Object.assign({
-			spring: options.spring || 0.1,
-		}, options);
+		this.options = { spring: options.spring || 0.1, ...options };
 
 		this.vars = {
 			direction: 0,
