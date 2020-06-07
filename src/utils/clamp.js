@@ -7,6 +7,6 @@
  *
  * @return int
  */
-export default function (value, min, max) {
+export default function clamp(value, min, max) {
 	return Math.min(Math.max(value, min), max);
 }
