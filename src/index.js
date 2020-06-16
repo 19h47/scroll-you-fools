@@ -5,7 +5,6 @@
  * @author  Jérémy Levron <jeremylevron@19h47.fr>
  */
 import VirtualScroll from 'virtual-scroll';
-// import raf from 'raf';
 
 import clamp from '@19h47/clamp';
 
