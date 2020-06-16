@@ -4,17 +4,13 @@
  * @file index.js
  * @author  Jérémy Levron <jeremylevron@19h47.fr>
  */
-import { EventEmitter } from 'events';
 import VirtualScroll from 'virtual-scroll';
-import raf from 'raf';
-import transform from 'prefix';
+// import raf from 'raf';
 
-import clamp from 'Utils/clamp';
+import clamp from '@19h47/clamp';
 
-export default class ScrollYouFools extends EventEmitter {
+export default class ScrollYouFools {
 	constructor(element, options) {
-		super();
-
 		this.bind();
 
 		// Set default options
@@ -42,17 +38,11 @@ export default class ScrollYouFools extends EventEmitter {
 			this.columns.left.children.length,
 		);
 
-		// console.log({ right: this.columns.right, left: this.columns.left });
-
 		this.vs = new VirtualScroll();
-		this.transform = transform('transform');
-
-		this.raf = raf;
 
 		this.addEvents();
 		this.onResize();
 	}
-
 
 	/**
 	 * Bind
@@ -64,7 +54,6 @@ export default class ScrollYouFools extends EventEmitter {
 		this.onResize = this.onResize.bind(this);
 	}
 
-
 	/**
 	 * update
 	 *
@@ -72,20 +61,26 @@ export default class ScrollYouFools extends EventEmitter {
 	 */
 	update() {
 		// Scroll value
-		this.vars.scrollValue += (this.vars.scrollTarget - this.vars.scrollValue) * this.vars.spring;
+		this.vars.scrollValue +=
+			(this.vars.scrollTarget - this.vars.scrollValue) * this.vars.spring;
 
 		this.vars.scrollValue = Math.round(
 			clamp(this.vars.scrollValue, -1, this.vars.scrollBottom + 1),
 		);
 
-		this.columns.right.style[this.transform] = `translate3d(0, ${this.vars.scrollValue}px, 0)`;
-		this.columns.left.style[this.transform] = `translate3d(0, -${this.vars.scrollValue}px, 0)`;
+		this.columns.right.style.setProperty(
+			'transform',
+			`translate3d(0, ${this.vars.scrollValue}px, 0)`,
+		);
+		this.columns.left.style.setProperty(
+			'transform',
+			`translate3d(0, -${this.vars.scrollValue}px, 0)`,
+		);
 
 		this.vars.oldScrollValue = this.vars.scrollValue;
 
-		return this.raf(this.update);
+		return requestAnimationFrame(this.update);
 	}
-
 
 	/**
 	 * onScroll
@@ -94,18 +89,11 @@ export default class ScrollYouFools extends EventEmitter {
 	 */
 	onScroll(e) {
 		this.vars.scrollTarget += e.deltaY * -1;
-		// eslint-disable-next-line max-len
+
 		this.vars.scrollTarget = Math.round(
-			Math.max(
-				0,
-				Math.min(
-					this.vars.scrollTarget,
-					this.vars.scrollBottom,
-				),
-			),
+			Math.max(0, Math.min(this.vars.scrollTarget, this.vars.scrollBottom)),
 		);
 	}
-
 
 	/**
 	 * onResize
@@ -115,9 +103,8 @@ export default class ScrollYouFools extends EventEmitter {
 	onResize() {
 		const wrapperHeight = this.wrapper.getBoundingClientRect().height;
 
-		this.vars.scrollBottom = wrapperHeight + (window.innerHeight * this.counter);
+		this.vars.scrollBottom = wrapperHeight + window.innerHeight * this.counter;
 	}
-
 
 	/**
 	 * addEvents
@@ -126,10 +113,9 @@ export default class ScrollYouFools extends EventEmitter {
 	 */
 	addEvents() {
 		this.vs.on(this.onScroll, this);
-		this.raf(this.update);
+		requestAnimationFrame(this.update);
 		window.addEventListener('resize', this.onResize);
 	}
-
 
 	/**
 	 * removeEvents
@@ -138,10 +124,9 @@ export default class ScrollYouFools extends EventEmitter {
 	 */
 	removeEvents() {
 		this.raf.cancel(this.update);
-		this.raf(this.update);
+		requestAnimationFrame(this.update);
 		window.removeEventListener('resize', this.onResize);
 	}
-
 
 	/**
 	 * destroy
